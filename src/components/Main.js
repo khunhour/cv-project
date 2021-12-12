@@ -14,7 +14,7 @@ export default class Main extends Component {
 			contacts: {
 				email: "",
 				tel: "",
-				linkedIn: "",
+				address: "",
 			},
 			work: [
 				{
@@ -40,12 +40,19 @@ export default class Main extends Component {
 		personalInfo[`${e.target.id}`] = e.target.value;
 		this.setState({ personalInfo });
 	};
+
+	handleChangeContacts = (e) => {
+		let contacts = { ...this.state.contacts };
+		contacts[`${e.target.id}`] = e.target.value;
+		this.setState({ contacts });
+	};
 	render() {
 		return (
 			<div>
 				<CVForm
 					info={this.state}
-					onChange={this.handleChangePersonalInfo}
+					onChangePersonalInfo={this.handleChangePersonalInfo}
+					onChangeContacts={this.handleChangeContacts}
 				/>
 			</div>
 		);

@@ -8,7 +8,7 @@ export default function PersonalInfoForm({
 	onChange,
 }) {
 	return (
-		<div id="personalInfo">
+		<div id="personalInfoForm">
 			<h3>Personal Information</h3>
 			<input
 				id="firstName"
