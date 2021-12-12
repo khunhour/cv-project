@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function workForm({
+export default function WorkForm({
 	role,
 	company,
 	startWorkYear,

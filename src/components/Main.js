@@ -56,7 +56,11 @@ export default class Main extends Component {
 	};
 
 	handleChangeWork = (e) => {
-		let work;
+		let workTemplate = { ...this.state.workTemplate };
+		workTemplate[`${e.target.id}`] = e.target.value;
+		this.setState({
+			workTemplate,
+		});
 	};
 	render() {
 		return (
@@ -66,6 +70,7 @@ export default class Main extends Component {
 					onChangePersonalInfo={this.handleChangePersonalInfo}
 					onChangeContacts={this.handleChangeContacts}
 					onChangeEducation={this.handleChangeEducation}
+					onChangeWork={this.handleChangeWork}
 				/>
 			</div>
 		);
