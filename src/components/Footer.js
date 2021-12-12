@@ -2,6 +2,13 @@ import React, { Component } from "react";
 
 export default class Footer extends Component {
 	render() {
-		return <div>this is a footer</div>;
+		return (
+			<footer>
+				<div>2021 &copy; khunhour</div>
+				<a href="#">
+					<img src="" alt="github" />
+				</a>
+			</footer>
+		);
 	}
 }
