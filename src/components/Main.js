@@ -16,8 +16,10 @@ export default class Main extends Component {
 				tel: "",
 				address: "",
 			},
+			skills: [],
 			work: [],
 			education: [],
+			skillTemplate: { skill: "" },
 			workTemplate: {
 				role: "",
 				company: "",
@@ -62,6 +64,14 @@ export default class Main extends Component {
 			workTemplate,
 		});
 	};
+
+	handleChangeSkills = (e) => {
+		let skillTemplate = { ...this.state.skillTemplate };
+		skillTemplate[`${e.target.id}`] = e.target.value;
+		this.setState({
+			skillTemplate,
+		});
+	};
 	render() {
 		return (
 			<div>
@@ -71,6 +81,7 @@ export default class Main extends Component {
 					onChangeContacts={this.handleChangeContacts}
 					onChangeEducation={this.handleChangeEducation}
 					onChangeWork={this.handleChangeWork}
+					onChangeSkills={this.handleChangeSkills}
 				/>
 			</div>
 		);
