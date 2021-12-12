@@ -16,18 +16,22 @@ export default class Main extends Component {
 				tel: "",
 				address: "",
 			},
-			work: {
+			work: [],
+			education: [],
+			workTemplate: {
 				role: "",
 				company: "",
 				startWorkYear: "",
 				endWorkYear: "",
 			},
-			education: {
-				school: "",
-				degree: "",
-				startEduYear: "",
-				endEduYear: "",
-			},
+			educationTemplate: [
+				{
+					school: "",
+					degree: "",
+					startEduYear: "",
+					endEduYear: "",
+				},
+			],
 		};
 	}
 
@@ -44,9 +48,15 @@ export default class Main extends Component {
 	};
 
 	handleChangeEducation = (e) => {
-		let education = { ...this.state.education };
-		education[`${e.target.id}`] = e.target.value;
-		this.setState({ education });
+		let educationTemplate = { ...this.state.educationTemplate };
+		educationTemplate[`${e.target.id}`] = e.target.value;
+		this.setState({
+			educationTemplate,
+		});
+	};
+
+	handleChangeWork = (e) => {
+		let work;
 	};
 	render() {
 		return (

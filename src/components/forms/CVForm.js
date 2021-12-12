@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ContactsForm from "./ContactsForm";
 import EducationForm from "./EducationForm";
 import PersonalInfoForm from "./PersonalInfoForm";
+import workForm from "./WorkForm";
 export default class CVForm extends Component {
 	constructor(props) {
 		super(props);
@@ -13,6 +14,7 @@ export default class CVForm extends Component {
 			onChangePersonalInfo,
 			onChangeContacts,
 			onChangeEducation,
+			onChangeWork,
 		} = this.props;
 		return (
 			<div>
@@ -26,9 +28,10 @@ export default class CVForm extends Component {
 					onChange={onChangeContacts}
 				/>
 				<EducationForm
-					education={info.education}
+					education={info.educationTemplate}
 					onChange={onChangeEducation}
 				/>
+				<workForm work={info.workTemplate} onChange={onChangeWork} />
 			</div>
 		);
 	}
