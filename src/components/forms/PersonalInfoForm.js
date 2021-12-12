@@ -1,23 +1,43 @@
-import { placeholder } from "@babel/types";
-import React, { Component } from "react";
-import InputText from "./InputText";
+import React from "react";
 
-export default class PersonalInfoForm extends Component {
-	constructor() {
-		super();
-	}
-
-	// handleChange = (e) => {
-	//   this.setState
-	// }
-
-	render() {
-		const { personalInfo } = this.props;
-		return (
-			<div id="personalInfo">
-				<h2>Personal Information</h2>
-				<InputText personalInfo={personalInfo} />
-			</div>
-		);
-	}
+export default function PersonalInfoForm({
+	firstName,
+	lastName,
+	title,
+	description,
+	onChange,
+}) {
+	return (
+		<div id="personalInfo">
+			<h3>Personal Information</h3>
+			<input
+				id="firstName"
+				type="text"
+				placeholder="First Name"
+				value={firstName}
+				onChange={onChange}
+			/>
+			<input
+				id="lastName"
+				type="text"
+				placeholder="Last Name"
+				value={lastName}
+				onChange={onChange}
+			/>
+			<input
+				id="title"
+				type="text"
+				placeholder="Title"
+				value={title}
+				onChange={onChange}
+			/>
+			<input
+				id="description"
+				type="text"
+				placeholder="Description"
+				value={description}
+				onChange={onChange}
+			/>
+		</div>
+	);
 }
