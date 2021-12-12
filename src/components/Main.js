@@ -16,22 +16,18 @@ export default class Main extends Component {
 				tel: "",
 				address: "",
 			},
-			work: [
-				{
-					role: "",
-					company: "",
-					startYear: "",
-					endYear: "",
-				},
-			],
-			education: [
-				{
-					school: "",
-					degree: "",
-					startYear: "",
-					endYear: "",
-				},
-			],
+			work: {
+				role: "",
+				company: "",
+				startWorkYear: "",
+				endWorkYear: "",
+			},
+			education: {
+				school: "",
+				degree: "",
+				startEduYear: "",
+				endEduYear: "",
+			},
 		};
 	}
 
@@ -46,6 +42,12 @@ export default class Main extends Component {
 		contacts[`${e.target.id}`] = e.target.value;
 		this.setState({ contacts });
 	};
+
+	handleChangeEducation = (e) => {
+		let education = { ...this.state.education };
+		education[`${e.target.id}`] = e.target.value;
+		this.setState({ education });
+	};
 	render() {
 		return (
 			<div>
@@ -53,6 +55,7 @@ export default class Main extends Component {
 					info={this.state}
 					onChangePersonalInfo={this.handleChangePersonalInfo}
 					onChangeContacts={this.handleChangeContacts}
+					onChangeEducation={this.handleChangeEducation}
 				/>
 			</div>
 		);

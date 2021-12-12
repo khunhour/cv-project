@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContactsForm from "./ContactsForm";
+import EducationForm from "./EducationForm";
 import PersonalInfoForm from "./PersonalInfoForm";
 export default class CVForm extends Component {
 	constructor(props) {
@@ -7,8 +8,12 @@ export default class CVForm extends Component {
 	}
 
 	render() {
-		const { info, onChangePersonalInfo, onChangeContacts } = this.props;
-		console.log(this.props);
+		const {
+			info,
+			onChangePersonalInfo,
+			onChangeContacts,
+			onChangeEducation,
+		} = this.props;
 		return (
 			<div>
 				<div>hello World</div>
@@ -19,6 +24,10 @@ export default class CVForm extends Component {
 				<ContactsForm
 					contacts={info.contacts}
 					onChange={onChangeContacts}
+				/>
+				<EducationForm
+					education={info.education}
+					onChange={onChangeEducation}
 				/>
 			</div>
 		);
