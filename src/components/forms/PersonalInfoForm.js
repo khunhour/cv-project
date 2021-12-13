@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function PersonalInfoForm({ personalInfo, onChange }) {
+export default function PersonalInfoForm({
+	personalInfo,
+	onChange,
+	onChangeImage,
+}) {
 	const { firstName, lastName, title, description, photo } = personalInfo;
 	return (
 		<div id="personalInfoForm">
@@ -28,10 +32,11 @@ export default function PersonalInfoForm({ personalInfo, onChange }) {
 			/>
 			<input
 				id="photo"
+				accept="images/*"
 				type="file"
 				placeholder="Add A Photo"
 				value={photo}
-				onChange={onChange}
+				onChange={onChangeImage}
 			/>
 			<input
 				id="description"

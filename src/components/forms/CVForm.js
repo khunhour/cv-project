@@ -12,6 +12,7 @@ export default class CVForm extends Component {
 		const {
 			info,
 			onChangePersonalInfo,
+			onChangeImage,
 			onChangeContacts,
 			onChangeEducation,
 			onChangeWork,
@@ -25,6 +26,7 @@ export default class CVForm extends Component {
 				<PersonalInfoForm
 					personalInfo={info.personalInfo}
 					onChange={onChangePersonalInfo}
+					onChangeImage={onChangeImage}
 				/>
 				<ContactsForm
 					contacts={info.contacts}

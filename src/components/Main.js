@@ -6,12 +6,12 @@ export default class Main extends Component {
 	constructor() {
 		super();
 		this.state = {
+			photo: "",
 			personalInfo: {
 				firstName: "",
 				lastName: "",
 				title: "",
 				description: "",
-				photo: "",
 			},
 			contacts: {
 				email: "",
@@ -36,6 +36,10 @@ export default class Main extends Component {
 			},
 		};
 	}
+	handleChangeImage = (e) => {
+		let photo = URL.createObjectURL(e.target.files[0]);
+		this.setState({ photo });
+	};
 
 	handleChangePersonalInfo = (e) => {
 		let personalInfo = { ...this.state.personalInfo };
@@ -113,6 +117,7 @@ export default class Main extends Component {
 				<CVForm
 					info={this.state}
 					onChangePersonalInfo={this.handleChangePersonalInfo}
+					onChangeImage={this.handleChangeImage}
 					onChangeContacts={this.handleChangeContacts}
 					onChangeEducation={this.handleChangeEducation}
 					onChangeWork={this.handleChangeWork}
@@ -122,6 +127,7 @@ export default class Main extends Component {
 					onSubmitWork={this.onSubmitWork}
 				/>
 				<Preview info={this.state} />
+				<img src={this.state.personalInfo.photo} />
 			</div>
 		);
 	}
