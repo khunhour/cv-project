@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CVForm from "./forms/CVForm";
+import Preview from "./preview/Preview";
 
 export default class Main extends Component {
 	constructor() {
@@ -120,6 +121,7 @@ export default class Main extends Component {
 					onSubmitSkills={this.onSubmitSkills}
 					onSubmitWork={this.onSubmitWork}
 				/>
+				<Preview info={this.state} />
 			</div>
 		);
 	}

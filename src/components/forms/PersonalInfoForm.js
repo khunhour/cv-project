@@ -1,13 +1,7 @@
 import React from "react";
 
-export default function PersonalInfoForm({
-	firstName,
-	lastName,
-	title,
-	description,
-	photo,
-	onChange,
-}) {
+export default function PersonalInfoForm({ personalInfo, onChange }) {
+	const { firstName, lastName, title, description, photo } = personalInfo;
 	return (
 		<div id="personalInfoForm">
 			<h3>Personal Information</h3>

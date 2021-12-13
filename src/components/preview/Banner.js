@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Banner({ firstName, lastName, title }) {
+export default function Banner(props) {
+	const { firstName, lastName, title } = props.personalInfo;
 	return (
 		<div id="banner">
 			<h2>

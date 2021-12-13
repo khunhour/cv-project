@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Contacts({ email, address, tel }) {
+export default function Contacts(props) {
+	const { email, address, tel } = props.contacts;
 	return (
 		<div id="contacts" src="../images">
 			<h3 className="heading">Contacts</h3>

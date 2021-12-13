@@ -8,7 +8,6 @@ export default class CVForm extends Component {
 	constructor(props) {
 		super(props);
 	}
-
 	render() {
 		const {
 			info,

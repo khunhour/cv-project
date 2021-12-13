@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function ContactsForm({ email, tel, address, onChange }) {
+export default function ContactsForm({ contacts, onChange }) {
+	const { email, tel, address } = contacts;
 	return (
 		<div id="contactForm">
 			<h3>Contacts</h3>
