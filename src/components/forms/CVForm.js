@@ -17,10 +17,12 @@ export default class CVForm extends Component {
 			onChangeEducation,
 			onChangeWork,
 			onChangeSkills,
+			onSubmitEducation,
+			onSubmitSkills,
+			onSubmitWork,
 		} = this.props;
 		return (
 			<div>
-				<div>hello World</div>
 				<PersonalInfoForm
 					personalInfo={info.personalInfo}
 					onChange={onChangePersonalInfo}
@@ -32,11 +34,17 @@ export default class CVForm extends Component {
 				<EducationForm
 					education={info.educationTemplate}
 					onChange={onChangeEducation}
+					onSubmit={onSubmitEducation}
 				/>
-				<WorkForm work={info.workTemplate} onChange={onChangeWork} />
+				<WorkForm
+					work={info.workTemplate}
+					onChange={onChangeWork}
+					onSubmit={onSubmitWork}
+				/>
 				<SkillsForm
 					skills={info.skillTemplate}
 					onChange={onChangeSkills}
+					onSubmit={onSubmitSkills}
 				/>
 			</div>
 		);

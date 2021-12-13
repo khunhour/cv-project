@@ -6,9 +6,10 @@ export default function EducationForm({
 	startEduYear,
 	endEduYear,
 	onChange,
+	onSubmit,
 }) {
 	return (
-		<div id="educationForm">
+		<form id="educationForm" onSubmit={onSubmit}>
 			<h3>Education</h3>
 			<input
 				id="school"
@@ -38,6 +39,7 @@ export default function EducationForm({
 				value={endEduYear}
 				onChange={onChange}
 			/>
-		</div>
+			<button type="submit">Add Education</button>
+		</form>
 	);
 }

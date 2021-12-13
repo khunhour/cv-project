@@ -10,7 +10,7 @@ export default class Main extends Component {
 				lastName: "",
 				title: "",
 				description: "",
-				photo:"",
+				photo: "",
 			},
 			contacts: {
 				email: "",
@@ -20,21 +20,19 @@ export default class Main extends Component {
 			skills: [],
 			work: [],
 			education: [],
-			skillTemplate: { skill: "" },
+			skillTemplate: "",
 			workTemplate: {
 				role: "",
 				company: "",
 				startWorkYear: "",
 				endWorkYear: "",
 			},
-			educationTemplate: 
-				{
-					school: "",
-					degree: "",
-					startEduYear: "",
-					endEduYear: "",
-				},
-			
+			educationTemplate: {
+				school: "",
+				degree: "",
+				startEduYear: "",
+				endEduYear: "",
+			},
 		};
 	}
 
@@ -67,13 +65,46 @@ export default class Main extends Component {
 	};
 
 	handleChangeSkills = (e) => {
-		let skillTemplate = { ...this.state.skillTemplate };
-		skillTemplate[`${e.target.id}`] = e.target.value;
 		this.setState({
-			skillTemplate,
+			skillTemplate: e.target.value,
 		});
 	};
 
+	onSubmitEducation = (e) => {
+		e.preventDefault();
+		this.setState({
+			education: this.state.education.concat(
+				this.state.educationTemplate
+			),
+			educationTemplate: {
+				school: "",
+				degree: "",
+				startEduYear: "",
+				endEduYear: "",
+			},
+		});
+	};
+
+	onSubmitWork = (e) => {
+		e.preventDefault();
+		this.setState({
+			work: this.state.education.concat(this.state.workTemplate),
+			workTemplate: {
+				role: "",
+				company: "",
+				startWorkYear: "",
+				endWorkYear: "",
+			},
+		});
+	};
+
+	onSubmitSkills = (e) => {
+		e.preventDefault();
+		this.setState({
+			skills: this.state.skills.concat(this.state.skillTemplate),
+			skillTemplate: "",
+		});
+	};
 
 	render() {
 		return (
@@ -85,6 +116,9 @@ export default class Main extends Component {
 					onChangeEducation={this.handleChangeEducation}
 					onChangeWork={this.handleChangeWork}
 					onChangeSkills={this.handleChangeSkills}
+					onSubmitEducation={this.onSubmitEducation}
+					onSubmitSkills={this.onSubmitSkills}
+					onSubmitWork={this.onSubmitWork}
 				/>
 			</div>
 		);
