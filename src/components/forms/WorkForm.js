@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function WorkForm({ work, onChange, onSubmit }) {
-	const { role, company, startWorkYear, endWorkYear } = work;
+export default function WorkForm({ work, workTemplate, onChange, onSubmit }) {
+	const { role, company, startWorkYear, endWorkYear } = workTemplate;
 	return (
 		<form id="workForm" onSubmit={onSubmit}>
 			<h3>Work Experience</h3>

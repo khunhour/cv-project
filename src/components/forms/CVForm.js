@@ -32,17 +32,20 @@ export default class CVForm extends Component {
 					onChange={onChangeContacts}
 				/>
 				<EducationForm
-					education={info.educationTemplate}
+					education={info.education}
+					educationTemplate={info.educationTemplate}
 					onChange={onChangeEducation}
 					onSubmit={onSubmitEducation}
 				/>
 				<WorkForm
-					work={info.workTemplate}
+					work={info.work}
+					workTemplate={info.workTemplate}
 					onChange={onChangeWork}
 					onSubmit={onSubmitWork}
 				/>
 				<SkillsForm
-					skill={info.skillTemplate}
+					skills={info.skills}
+					skillTemplate={info.skillTemplate}
 					onChange={onChangeSkills}
 					onSubmit={onSubmitSkills}
 				/>

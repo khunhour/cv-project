@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function SkillsForm({ skill, onChange, onSubmit }) {
+export default function SkillsForm({
+	skills,
+	skillTemplate,
+	onChange,
+	onSubmit,
+}) {
 	return (
 		<form id="skillsForm" onSubmit={onSubmit}>
 			<h3>Skills</h3>
@@ -8,7 +13,7 @@ export default function SkillsForm({ skill, onChange, onSubmit }) {
 				id="skill"
 				type="text"
 				placeholder="skill"
-				value={skill}
+				value={skillTemplate}
 				onChange={onChange}
 			/>
 			<button type="submit">Add Skill</button>

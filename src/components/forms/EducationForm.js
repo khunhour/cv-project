@@ -1,7 +1,12 @@
 import React from "react";
 
-export default function EducationForm({ education, onChange, onSubmit }) {
-	const { school, degree, startEduYear, endEduYear } = education;
+export default function EducationForm({
+	education,
+	educationTemplate,
+	onChange,
+	onSubmit,
+}) {
+	const { school, degree, startEduYear, endEduYear } = educationTemplate;
 	return (
 		<form id="educationForm" onSubmit={onSubmit}>
 			<h3>Education</h3>
