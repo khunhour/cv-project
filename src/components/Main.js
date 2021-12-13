@@ -27,14 +27,14 @@ export default class Main extends Component {
 				startWorkYear: "",
 				endWorkYear: "",
 			},
-			educationTemplate: [
+			educationTemplate: 
 				{
 					school: "",
 					degree: "",
 					startEduYear: "",
 					endEduYear: "",
 				},
-			],
+			
 		};
 	}
 
@@ -74,7 +74,7 @@ export default class Main extends Component {
 		});
 	};
 
-	
+
 	render() {
 		return (
 			<div>
