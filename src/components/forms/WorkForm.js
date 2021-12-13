@@ -6,9 +6,10 @@ export default function WorkForm({
 	startWorkYear,
 	endWorkYear,
 	onChange,
+	onSubmit,
 }) {
 	return (
-		<div id="workForm">
+		<form id="workForm" onSubmit={onSubmit}>
 			<h3>Work Experience</h3>
 			<input
 				id="role"
@@ -38,6 +39,7 @@ export default function WorkForm({
 				value={endWorkYear}
 				onChange={onChange}
 			/>
-		</div>
+			<button type="submit">Add Work Experience</button>
+		</form>
 	);
 }
