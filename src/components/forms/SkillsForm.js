@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function SkillsForm({ skill, onChange }) {
+export default function SkillsForm({ skill, onChange, onSubmit }) {
 	return (
-		<div id="skillsForm">
+		<form id="skillsForm" onSubmit={onSubmit}>
 			<h3>Skills</h3>
 			<input
 				id="skill"
@@ -11,6 +11,7 @@ export default function SkillsForm({ skill, onChange }) {
 				value={skill}
 				onChange={onChange}
 			/>
-		</div>
+			<button type="submit">Add Skill</button>
+		</form>
 	);
 }
