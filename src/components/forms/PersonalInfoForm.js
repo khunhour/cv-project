@@ -5,6 +5,7 @@ export default function PersonalInfoForm({
 	lastName,
 	title,
 	description,
+	photo,
 	onChange,
 }) {
 	return (
@@ -29,6 +30,13 @@ export default function PersonalInfoForm({
 				type="text"
 				placeholder="Title"
 				value={title}
+				onChange={onChange}
+			/>
+			<input
+				id="photo"
+				type="image"
+				placeholder="Add A Photo"
+				value={photo}
 				onChange={onChange}
 			/>
 			<input

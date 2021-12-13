@@ -10,6 +10,7 @@ export default class Main extends Component {
 				lastName: "",
 				title: "",
 				description: "",
+				photo:"",
 			},
 			contacts: {
 				email: "",
@@ -72,6 +73,8 @@ export default class Main extends Component {
 			skillTemplate,
 		});
 	};
+
+	
 	render() {
 		return (
 			<div>
