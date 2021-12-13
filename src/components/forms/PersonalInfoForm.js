@@ -34,7 +34,7 @@ export default function PersonalInfoForm({
 			/>
 			<input
 				id="photo"
-				type="image"
+				type="file"
 				placeholder="Add A Photo"
 				value={photo}
 				onChange={onChange}
