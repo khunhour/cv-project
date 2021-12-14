@@ -4,6 +4,8 @@ import Banner from "./Banner";
 import Contacts from "./Contacts";
 import Education from "./Education";
 import Photo from "./Photo";
+import Skills from "./Skills";
+import Work from "./Work";
 
 export default function Preview({ info }) {
 	return (
@@ -13,6 +15,8 @@ export default function Preview({ info }) {
 			<AboutMe personalInfo={info.personalInfo} />
 			<Contacts contacts={info.contacts} />
 			<Education education={info.education} />
+			<Work work={info.work} />
+			<Skills skills={info.skills} />
 		</div>
 	);
 }

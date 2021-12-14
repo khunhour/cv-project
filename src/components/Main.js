@@ -158,7 +158,7 @@ export default class Main extends Component {
 		});
 	};
 
-	handleDeletework = (id) => {
+	handleDeleteWork = (id) => {
 		this.setState((prevState) => {
 			const newWork = prevState.work.filter(
 				(workItem) => workItem.id !== id

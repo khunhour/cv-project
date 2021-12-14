@@ -6,5 +6,10 @@ export default function Education(props) {
 		<EducationItem educationItem={educationItem} />
 	));
 
-	return <div>{educationItems}</div>;
+	return (
+		<div>
+			<h3>Education</h3>
+			<div>{educationItems}</div>
+		</div>
+	);
 }
