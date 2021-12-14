@@ -40,7 +40,6 @@ export default class CVForm extends Component {
 				/>
 				<WorkForm
 					work={info.work}
-					workTemplate={info.workTemplate}
 					onChange={onChangeWork}
 					onSubmit={onSubmitWork}
 				/>

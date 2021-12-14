@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CVForm from "./forms/CVForm";
 import Preview from "./preview/Preview";
+import uniqid from "uniqid";
 
 export default class Main extends Component {
 	constructor() {
@@ -19,16 +20,19 @@ export default class Main extends Component {
 				address: "",
 			},
 			skills: [],
-			work: [],
+			work: [
+				{
+					id: uniqid(),
+					role: "",
+					company: "",
+					startWorkYear: "",
+					endWorkYear: "",
+				},
+			],
 			education: [],
 			skillTemplate: "",
-			workTemplate: {
-				role: "",
-				company: "",
-				startWorkYear: "",
-				endWorkYear: "",
-			},
 			educationTemplate: {
+				id: uniqid(),
 				school: "",
 				degree: "",
 				startEduYear: "",
@@ -61,11 +65,16 @@ export default class Main extends Component {
 		});
 	};
 
-	handleChangeWork = (e) => {
-		let workTemplate = { ...this.state.workTemplate };
-		workTemplate[`${e.target.id}`] = e.target.value;
-		this.setState({
-			workTemplate,
+	handleChangeWork = (e, id) => {
+		const { name, value } = e.target;
+		this.setState((prevState) => {
+			const newWork = prevState.work.map((workItem) => {
+				if (workItem.id === id) {
+					return { ...workItem, [name]: value };
+				}
+				return workItem;
+			});
+			return { ...prevState, work: [...newWork] };
 		});
 	};
 
@@ -92,15 +101,19 @@ export default class Main extends Component {
 
 	onSubmitWork = (e) => {
 		e.preventDefault();
-		this.setState({
-			work: this.state.education.concat(this.state.workTemplate),
-			workTemplate: {
-				role: "",
-				company: "",
-				startWorkYear: "",
-				endWorkYear: "",
-			},
-		});
+		this.setState((prevState) => ({
+			...prevState,
+			work: [
+				...prevState.work,
+				{
+					id: uniqid(),
+					role: "",
+					company: "",
+					startWorkYear: "",
+					endWorkYear: "",
+				},
+			],
+		}));
 	};
 
 	onSubmitSkills = (e) => {
