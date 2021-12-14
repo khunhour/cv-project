@@ -3,7 +3,7 @@ import React from "react";
 export default function WorkInput({ workItem, onChange }) {
 	const { id, role, company, startWorkYear, endWorkYear } = workItem;
 	return (
-		<div>
+		<>
 			<input
 				name="role"
 				type="text"
@@ -32,6 +32,6 @@ export default function WorkInput({ workItem, onChange }) {
 				value={endWorkYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-		</div>
+		</>
 	);
 }

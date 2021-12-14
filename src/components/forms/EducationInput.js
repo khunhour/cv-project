@@ -3,7 +3,7 @@ import React from "react";
 export default function EducationInput({ educationItem, onChange }) {
 	const { id, school, degree, startEduYear, endEduYear } = educationItem;
 	return (
-		<div>
+		<>
 			<input
 				name="school"
 				type="text"
@@ -32,6 +32,6 @@ export default function EducationInput({ educationItem, onChange }) {
 				value={endEduYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-		</div>
+		</>
 	);
 }

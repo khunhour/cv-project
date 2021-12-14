@@ -6,12 +6,10 @@ export default function WorkForm({ work, onChange, onSubmit }) {
 		<WorkInput key={workItem.id} workItem={workItem} onChange={onChange} />
 	));
 	return (
-		<div>
-			<form id="workForm" onSubmit={onSubmit}>
-				<h3>Work Experience</h3>
-				{workItems}
-				<button type="submit">Add Work Experience</button>
-			</form>
-		</div>
+		<form id="workForm" onSubmit={onSubmit}>
+			<h3>Work Experience</h3>
+			{workItems}
+			<button type="submit">Add Work Experience</button>
+		</form>
 	);
 }
