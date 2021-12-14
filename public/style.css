@@ -1,0 +1,22 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.8rem;
+	background-color: #335384;
+	color: #6bafd5;
+}
+main {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+input {
+	display: block;
+}

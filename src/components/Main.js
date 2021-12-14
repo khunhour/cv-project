@@ -151,7 +151,7 @@ export default class Main extends Component {
 
 	render() {
 		return (
-			<div>
+			<main>
 				<CVForm
 					info={this.state}
 					onChangePersonalInfo={this.handleChangePersonalInfo}
@@ -166,7 +166,7 @@ export default class Main extends Component {
 				/>
 				<Preview info={this.state} />
 				<img src={this.state.personalInfo.photo} />
-			</div>
+			</main>
 		);
 	}
 }
