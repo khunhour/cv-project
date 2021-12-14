@@ -34,7 +34,6 @@ export default class CVForm extends Component {
 				/>
 				<EducationForm
 					education={info.education}
-					educationTemplate={info.educationTemplate}
 					onChange={onChangeEducation}
 					onSubmit={onSubmitEducation}
 				/>

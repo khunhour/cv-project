@@ -19,7 +19,12 @@ export default class Main extends Component {
 				tel: "",
 				address: "",
 			},
-			skills: [],
+			skills: [
+				{
+					id: uniqid(),
+					skill: "",
+				},
+			],
 			work: [
 				{
 					id: uniqid(),
@@ -29,15 +34,15 @@ export default class Main extends Component {
 					endWorkYear: "",
 				},
 			],
-			education: [],
-			skillTemplate: "",
-			educationTemplate: {
-				id: uniqid(),
-				school: "",
-				degree: "",
-				startEduYear: "",
-				endEduYear: "",
-			},
+			education: [
+				{
+					id: uniqid(),
+					school: "",
+					degree: "",
+					startEduYear: "",
+					endEduYear: "",
+				},
+			],
 		};
 	}
 	handleChangeImage = (e) => {
@@ -57,11 +62,16 @@ export default class Main extends Component {
 		this.setState({ contacts });
 	};
 
-	handleChangeEducation = (e) => {
-		let educationTemplate = { ...this.state.educationTemplate };
-		educationTemplate[`${e.target.id}`] = e.target.value;
-		this.setState({
-			educationTemplate,
+	handleChangeEducation = (e, id) => {
+		const { name, value } = e.target;
+		this.setState((prevState) => {
+			const newEducation = prevState.education.map((educationItem) => {
+				if (educationItem.id === id) {
+					return { ...educationItem, [name]: value };
+				}
+				return educationItem;
+			});
+			return { ...prevState, education: [...newEducation] };
 		});
 	};
 
@@ -86,17 +96,19 @@ export default class Main extends Component {
 
 	onSubmitEducation = (e) => {
 		e.preventDefault();
-		this.setState({
-			education: this.state.education.concat(
-				this.state.educationTemplate
-			),
-			educationTemplate: {
-				school: "",
-				degree: "",
-				startEduYear: "",
-				endEduYear: "",
-			},
-		});
+		this.setState((prevState) => ({
+			...prevState,
+			education: [
+				...prevState.education,
+				{
+					id: uniqid(),
+					school: "",
+					degree: "",
+					startEduYear: "",
+					endEduYear: "",
+				},
+			],
+		}));
 	};
 
 	onSubmitWork = (e) => {
