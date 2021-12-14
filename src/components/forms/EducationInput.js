@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EducationInput({ educationItem, onChange }) {
+export default function EducationInput({ educationItem, onChange, onDelete }) {
 	const { id, school, degree, startEduYear, endEduYear } = educationItem;
 	return (
 		<>
@@ -32,6 +32,7 @@ export default function EducationInput({ educationItem, onChange }) {
 				value={endEduYear}
 				onChange={(e) => onChange(e, id)}
 			/>
+			<button onClick={() => onDelete(id)}>Delete Education</button>
 		</>
 	);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SkillInput({ skillItem, onChange }) {
+export default function SkillInput({ skillItem, onChange, onDelete }) {
 	const { id, skill } = skillItem;
 	return (
 		<>
@@ -11,6 +11,7 @@ export default function SkillInput({ skillItem, onChange }) {
 				value={skill}
 				onChange={(e) => onChange(e, id)}
 			/>
+			<button onClick={() => onDelete(id)}>Delete Skill</button>
 		</>
 	);
 }

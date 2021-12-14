@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WorkInput({ workItem, onChange }) {
+export default function WorkInput({ workItem, onChange, onDelete }) {
 	const { id, role, company, startWorkYear, endWorkYear } = workItem;
 	return (
 		<>
@@ -32,6 +32,7 @@ export default function WorkInput({ workItem, onChange }) {
 				value={endWorkYear}
 				onChange={(e) => onChange(e, id)}
 			/>
+			<button onClick={() => onDelete(id)}>Delete Work Experience</button>
 		</>
 	);
 }

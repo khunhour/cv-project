@@ -20,6 +20,9 @@ export default class CVForm extends Component {
 			onSubmitEducation,
 			onSubmitSkills,
 			onSubmitWork,
+			onDeleteEducation,
+			onDeleteWork,
+			onDeleteSkills,
 		} = this.props;
 		return (
 			<div>
@@ -36,16 +39,19 @@ export default class CVForm extends Component {
 					education={info.education}
 					onChange={onChangeEducation}
 					onSubmit={onSubmitEducation}
+					onDelete={onDeleteEducation}
 				/>
 				<WorkForm
 					work={info.work}
 					onChange={onChangeWork}
 					onSubmit={onSubmitWork}
+					onDelete={onDeleteWork}
 				/>
 				<SkillsForm
 					skills={info.skills}
 					onChange={onChangeSkills}
 					onSubmit={onSubmitSkills}
+					onDelete={onDeleteSkills}
 				/>
 			</div>
 		);

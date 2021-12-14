@@ -1,9 +1,14 @@
 import React from "react";
 import WorkInput from "./WorkInput";
 
-export default function WorkForm({ work, onChange, onSubmit }) {
+export default function WorkForm({ work, onChange, onSubmit, onDelete }) {
 	const workItems = work.map((workItem) => (
-		<WorkInput key={workItem.id} workItem={workItem} onChange={onChange} />
+		<WorkInput
+			key={workItem.id}
+			workItem={workItem}
+			onChange={onChange}
+			onDelete={onDelete}
+		/>
 	));
 	return (
 		<form id="workForm" onSubmit={onSubmit}>

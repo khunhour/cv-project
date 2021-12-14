@@ -1,12 +1,18 @@
 import React from "react";
 import EducationInput from "./EducationInput";
 
-export default function EducationForm({ education, onChange, onSubmit }) {
+export default function EducationForm({
+	education,
+	onChange,
+	onSubmit,
+	onDelete,
+}) {
 	const educationItems = education.map((educationItem) => (
 		<EducationInput
 			key={educationItem.id}
 			educationItem={educationItem}
 			onChange={onChange}
+			onDelete={onDelete}
 		/>
 	));
 
