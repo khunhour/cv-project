@@ -44,7 +44,6 @@ export default class CVForm extends Component {
 				/>
 				<SkillsForm
 					skills={info.skills}
-					skillTemplate={info.skillTemplate}
 					onChange={onChangeSkills}
 					onSubmit={onSubmitSkills}
 				/>

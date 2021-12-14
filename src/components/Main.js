@@ -88,9 +88,16 @@ export default class Main extends Component {
 		});
 	};
 
-	handleChangeSkills = (e) => {
-		this.setState({
-			skillTemplate: e.target.value,
+	handleChangeSkills = (e, id) => {
+		const { name, value } = e.target;
+		this.setState((prevState) => {
+			const newSkills = prevState.skills.map((skillItem) => {
+				if (skillItem.id === id) {
+					return { ...skillItem, [name]: value };
+				}
+				return skillItem;
+			});
+			return { ...prevState, skills: [...newSkills] };
 		});
 	};
 
@@ -130,10 +137,16 @@ export default class Main extends Component {
 
 	onSubmitSkills = (e) => {
 		e.preventDefault();
-		this.setState({
-			skills: this.state.skills.concat(this.state.skillTemplate),
-			skillTemplate: "",
-		});
+		this.setState((prevState) => ({
+			...prevState,
+			skills: [
+				...prevState.skills,
+				{
+					id: uniqid(),
+					skill: "",
+				},
+			],
+		}));
 	};
 
 	render() {

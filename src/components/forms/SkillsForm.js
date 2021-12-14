@@ -1,21 +1,19 @@
 import React from "react";
+import SkillInput from "./SkillInput";
 
-export default function SkillsForm({
-	skills,
-	skillTemplate,
-	onChange,
-	onSubmit,
-}) {
+export default function SkillsForm({ skills, onChange, onSubmit }) {
+	const skillItems = skills.map((skillItem) => (
+		<SkillInput
+			key={skillItem.id}
+			skillItem={skillItem}
+			onChange={onChange}
+		/>
+	));
+	console.log(skillItems);
 	return (
 		<form id="skillsForm" onSubmit={onSubmit}>
 			<h3>Skills</h3>
-			<input
-				id="skill"
-				type="text"
-				placeholder="skill"
-				value={skillTemplate}
-				onChange={onChange}
-			/>
+			{skillItems}
 			<button type="submit">Add Skill</button>
 		</form>
 	);
