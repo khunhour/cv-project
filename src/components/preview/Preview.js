@@ -9,14 +9,22 @@ import Work from "./Work";
 
 export default function Preview({ info }) {
 	return (
-		<div>
-			<Photo photo={info.photo} />
-			<Banner personalInfo={info.personalInfo} />
-			<AboutMe personalInfo={info.personalInfo} />
-			<Contacts contacts={info.contacts} />
-			<Education education={info.education} />
-			<Work work={info.work} />
-			<Skills skills={info.skills} />
+		<div className="preview">
+			<div className="upper-left">
+				<Photo photo={info.photo} />
+			</div>
+			<div className="upper-right">
+				<Banner personalInfo={info.personalInfo} />
+			</div>
+			<div className="lower-left">
+				<Contacts contacts={info.contacts} />
+				<Skills skills={info.skills} />
+			</div>
+			<div className="lower-right">
+				<AboutMe personalInfo={info.personalInfo} />
+				<Education education={info.education} />
+				<Work work={info.work} />
+			</div>
 		</div>
 	);
 }

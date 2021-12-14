@@ -3,8 +3,8 @@ import React from "react";
 export default function ContactsForm({ contacts, onChange }) {
 	const { email, tel, address } = contacts;
 	return (
-		<div id="contactForm">
-			<h3>Contacts</h3>
+		<form>
+			<h3 className="heading">Contacts</h3>
 			<input
 				id="email"
 				type="email"
@@ -26,6 +26,6 @@ export default function ContactsForm({ contacts, onChange }) {
 				value={address}
 				onChange={onChange}
 			/>
-		</div>
+		</form>
 	);
 }

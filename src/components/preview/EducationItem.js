@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function EducationItem({ educationItem }) {
-	const { id, school, degree, startEduYear, endEduYear } = educationItem;
+	const { school, degree, startEduYear, endEduYear } = educationItem;
 
 	return (
 		<div>

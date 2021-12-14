@@ -18,7 +18,7 @@ export default function EducationForm({
 
 	return (
 		<form id="educationForm" onSubmit={onSubmit}>
-			<h3>Education</h3>
+			<h3 className="heading">Education</h3>
 			{educationItems}
 			<button type="submit">Add Education</button>
 		</form>

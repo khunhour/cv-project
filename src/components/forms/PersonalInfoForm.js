@@ -7,8 +7,8 @@ export default function PersonalInfoForm({
 }) {
 	const { firstName, lastName, title, description, photo } = personalInfo;
 	return (
-		<div id="personalInfoForm">
-			<h3>Personal Information</h3>
+		<form>
+			<h3 className="heading">Personal Information</h3>
 			<input
 				id="firstName"
 				type="text"
@@ -45,6 +45,6 @@ export default function PersonalInfoForm({
 				value={description}
 				onChange={onChange}
 			/>
-		</div>
+		</form>
 	);
 }

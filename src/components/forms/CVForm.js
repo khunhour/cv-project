@@ -4,10 +4,8 @@ import EducationForm from "./EducationForm";
 import PersonalInfoForm from "./PersonalInfoForm";
 import SkillsForm from "./SkillsForm";
 import WorkForm from "./WorkForm";
+
 export default class CVForm extends Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		const {
 			info,
@@ -25,7 +23,7 @@ export default class CVForm extends Component {
 			onDeleteSkills,
 		} = this.props;
 		return (
-			<div>
+			<div className="CV-form">
 				<PersonalInfoForm
 					personalInfo={info.personalInfo}
 					onChange={onChangePersonalInfo}

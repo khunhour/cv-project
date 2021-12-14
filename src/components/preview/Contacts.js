@@ -8,15 +8,15 @@ export default function Contacts(props) {
 	return (
 		<div id="contacts">
 			<h3 className="heading">Contacts</h3>
-			<div className="email">
+			<div className="contacts">
 				<img src={emailIcon} alt="email" />
 				<div>{email}</div>
 			</div>
-			<div className="tel">
+			<div className="contacts">
 				<img src={phoneIcon} alt="phone" />
 				<div>{tel}</div>
 			</div>
-			<div className="address">
+			<div className="contacts">
 				<img src={addressIcon} alt="address" />
 				<div>{address}</div>
 			</div>
