@@ -5,9 +5,9 @@ export default function EducationItem({ educationItem }) {
 
 	return (
 		<div className="group-box">
-			<div>{degree}</div>
-			<div>{school}</div>
-			<div>
+			<div className="upper-box">{degree}</div>
+			<div className="middle-box">{school}</div>
+			<div className="lower-box">
 				{startEduYear}~{endEduYear}
 			</div>
 		</div>

@@ -7,7 +7,7 @@ export default function Contacts(props) {
 	const { email, address, tel } = props.contacts;
 	return (
 		<div id="contacts">
-			<h3 className="heading">Contacts</h3>
+			<h3 className="heading-white">Contacts</h3>
 			<div className="contacts">
 				<img src={emailIcon} alt="email" />
 				<div>{email}</div>

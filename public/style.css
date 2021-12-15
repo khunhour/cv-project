@@ -1,12 +1,13 @@
 :root {
-	font-size: 17px;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
 }
 
 html,
 body {
 	padding: 0;
 	margin: 0;
-	background-color: darkolivegreen;
+	background-color: rgb(197, 214, 221);
 }
 
 header {
@@ -19,15 +20,17 @@ header {
 main {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
 	padding: 1rem;
 }
 
 .CV-form {
-	background-color: blanchedalmond;
+	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
+	width: 600px;
+	box-sizing: border-box;
+	display: none;
 }
 
 form {
@@ -37,31 +40,42 @@ form {
 }
 input {
 	display: block;
+	border: solid 1px #dfe0e0;
+	border-radius: 2px;
+	font-family: "Poppins", sans-serif;
 }
 
 .heading {
-	color: #6bafd5;
-	border-bottom: solid 2px #6bafd5;
+	color: #335384;
+	border-bottom: solid 2px #335384;
 	margin-top: 0.6rem;
 	margin-bottom: 0.6rem;
 }
-button{
-	padding:8px;
-	border-radius: 5px;
-	border:none;
+
+.heading-white {
+	color: white;
+	border-bottom: solid 2px white;
+	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
 }
-.deleteBtn{
+
+button {
+	padding: 8px;
+	border-radius: 5px;
+	border: none;
+}
+.deleteBtn {
 	background-color: rgb(247, 60, 60);
 	color: white;
 }
-.addBtn{
+.addBtn {
 	background-color: #335384;
 	color: white;
 }
-.previewBtn{
+.previewBtn {
 	position: fixed;
 	bottom: 8px;
-	right: 8px; 
+	right: 8px;
 	border-radius: 14px;
 	background-color: #335384;
 	color: white;
@@ -70,15 +84,19 @@ button{
 .preview {
 	display: grid;
 	background-color: rgb(8, 53, 138);
-	grid-template-columns: 160px 2fr;
-	grid-template-rows: 160px 800px;
-	width: 500px;
+	grid-template-columns: 250px 2fr;
+	grid-template-rows: 180px 800px;
+	width: 800px;
+	box-sizing: border-box;
 }
 
+.preview > div {
+	padding: 0.8rem;
+}
 .upper-left,
 .lower-left {
 	background-color: #335384;
-	color: white;
+	color: white !important;
 }
 .upper-right,
 .lower-right {
@@ -86,51 +104,71 @@ button{
 	color: #16263d;
 }
 
-.preview > div {
-	padding: 1rem;
-}
 .profile-photo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: black;
 	background-color: cornsilk;
 	border-radius: 50%;
-	width: 100%;
-	height: 100%;
+	width: 150px;
+	height: 150px;
+	margin: auto;
 }
 
 #banner {
 	height: 100%;
 	width: 100%;
-	border: darkolivegreen 2px solid;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 #banner > * {
-	margin: 0.5rem;
+	text-align: center;
+	box-sizing: border-box;
+	color: #335384;
+	margin: 0;
 }
-#margin h2 {
-	border-bottom: solid 3px #335384;
+#banner h2 {
+	width: 390px;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: solid 2px #335384;
 }
 
 #contacts img {
 	height: 1rem;
 	width: 1rem;
+	margin-right: 3px;
+	margin-bottom: 10px;
 }
 
 .contacts {
 	display: flex;
+	font-size: 0.75rem;
 }
 
-.group-box{
-	display:block;
-	border-radius: 3px;
+.group-box {
+	display: block;
 	border-left: 4px solid #6bafd5;
-	gap:1rem;
+	padding: 5px;
+	padding-left: 10px;
+	gap: 1rem;
 }
 
-footer{
+.upper-box {
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.middle-box {
+	font-size: 0.8rem;
+	font-style: italic;
+}
+.lower-box {
+	font-size: 0.6rem;
+}
+footer {
 	background-color: #335384;
 }
