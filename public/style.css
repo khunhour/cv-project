@@ -45,18 +45,26 @@ input {
 	margin-top: 0.6rem;
 	margin-bottom: 0.6rem;
 }
-
-.deleteBtn{
+button{
 	padding:8px;
+	border-radius: 5px;
+	border:none;
+}
+.deleteBtn{
 	background-color: rgb(247, 60, 60);
 	color: white;
-	border-radius: 5px;
 }
 .addBtn{
-	padding:8px;
 	background-color: #335384;
 	color: white;
-	border-radius: 5px;
+}
+.previewBtn{
+	position: fixed;
+	bottom: 8px;
+	right: 8px; 
+	border-radius: 14px;
+	background-color: #335384;
+	color: white;
 }
 
 .preview {
@@ -66,6 +74,7 @@ input {
 	grid-template-rows: 160px 800px;
 	width: 500px;
 }
+
 .upper-left,
 .lower-left {
 	background-color: #335384;

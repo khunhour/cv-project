@@ -194,7 +194,7 @@ export default class Main extends Component {
 					onDeleteSkills={this.handleDeleteSkills}
 				/>
 				<Preview info={this.state} />
-				<img src={this.state.personalInfo.photo} />
+				<button className="previewBtn">Preview</button>
 			</main>
 		);
 	}
