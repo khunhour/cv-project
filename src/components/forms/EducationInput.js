@@ -5,17 +5,17 @@ export default function EducationInput({ educationItem, onChange, onDelete }) {
 	return (
 		<>
 			<input
-				name="school"
-				type="text"
-				placeholder="School or University"
-				value={school}
-				onChange={(e) => onChange(e, id)}
-			/>
-			<input
 				name="degree"
 				type="text"
 				placeholder="Degree"
 				value={degree}
+				onChange={(e) => onChange(e, id)}
+			/>
+			<input
+				name="school"
+				type="text"
+				placeholder="School or University"
+				value={school}
 				onChange={(e) => onChange(e, id)}
 			/>
 			<input
@@ -32,7 +32,9 @@ export default function EducationInput({ educationItem, onChange, onDelete }) {
 				value={endEduYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-			<button className="deleteBtn" onClick={() => onDelete(id)}>Delete Education</button>
+			<button className="deleteBtn" onClick={() => onDelete(id)}>
+				Delete Education
+			</button>
 		</>
 	);
 }

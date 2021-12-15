@@ -5,9 +5,9 @@ export default function WorkItem({ workItem }) {
 
 	return (
 		<div className="group-box">
-			<div>{role}</div>
-			<div>{company}</div>
-			<div>
+			<div className="upper-box">{role}</div>
+			<div className="middle-box">{company}</div>
+			<div className="lower-box">
 				{startWorkYear}~{endWorkYear}
 			</div>
 		</div>

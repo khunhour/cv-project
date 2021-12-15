@@ -17,11 +17,11 @@ export default function Preview({ info }) {
 				<Banner personalInfo={info.personalInfo} />
 			</div>
 			<div className="lower-left">
+				<AboutMe personalInfo={info.personalInfo} />
 				<Contacts contacts={info.contacts} />
 				<Skills skills={info.skills} />
 			</div>
 			<div className="lower-right">
-				<AboutMe personalInfo={info.personalInfo} />
 				<Education education={info.education} />
 				<Work work={info.work} />
 			</div>

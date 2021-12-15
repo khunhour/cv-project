@@ -19,8 +19,9 @@ header {
 }
 main {
 	display: flex;
-	justify-content: space-around;
 	padding: 1rem;
+	gap: 1rem;
+	justify-content: space-evenly;
 }
 
 .CV-form {
@@ -30,7 +31,6 @@ main {
 	padding: 1rem;
 	width: 600px;
 	box-sizing: border-box;
-	display: none;
 }
 
 form {
@@ -38,11 +38,13 @@ form {
 	flex-direction: column;
 	gap: 0.3rem;
 }
+textarea,
 input {
 	display: block;
 	border: solid 1px #dfe0e0;
 	border-radius: 2px;
 	font-family: "Poppins", sans-serif;
+	font-size: 0.75rem;
 }
 
 .heading {
@@ -84,9 +86,10 @@ button {
 .preview {
 	display: grid;
 	background-color: rgb(8, 53, 138);
-	grid-template-columns: 250px 2fr;
+	grid-template-columns: 300px 2fr;
 	grid-template-rows: 180px 800px;
 	width: 800px;
+	height: 900px;
 	box-sizing: border-box;
 }
 
@@ -115,6 +118,12 @@ button {
 	height: 150px;
 	margin: auto;
 }
+.profile-photo img {
+	height: 150px;
+	width: 150px;
+	line-height: 150px;
+	text-align: center;
+}
 
 #banner {
 	height: 100%;
@@ -130,11 +139,15 @@ button {
 	color: #335384;
 	margin: 0;
 }
-#banner h2 {
+#banner h1 {
 	width: 390px;
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	border-bottom: solid 2px #335384;
+}
+
+.about-me {
+	font-size: 0.9rem;
 }
 
 #contacts img {
@@ -148,6 +161,14 @@ button {
 	display: flex;
 	font-size: 0.75rem;
 }
+ul {
+	font-size: 0.9rem;
+	list-style-position: inside;
+	padding-left: 0;
+}
+li {
+	margin: 0;
+}
 
 .group-box {
 	display: block;
@@ -155,6 +176,7 @@ button {
 	padding: 5px;
 	padding-left: 10px;
 	gap: 1rem;
+	margin-bottom: 7px;
 }
 
 .upper-box {
@@ -169,6 +191,7 @@ button {
 .lower-box {
 	font-size: 0.6rem;
 }
+
 footer {
 	background-color: #335384;
 }

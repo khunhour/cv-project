@@ -20,19 +20,21 @@ export default function WorkInput({ workItem, onChange, onDelete }) {
 			/>
 			<input
 				name="startWorkYear"
-				type="text"
+				type="number"
 				placeholder="Start Year"
 				value={startWorkYear}
 				onChange={(e) => onChange(e, id)}
 			/>
 			<input
 				name="endWorkYear"
-				type="text"
+				type="number"
 				placeholder="End Year"
 				value={endWorkYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-			<button className="deleteBtn" onClick={() => onDelete(id)}>Delete Work Experience</button>
+			<button className="deleteBtn" onClick={() => onDelete(id)}>
+				Delete Work Experience
+			</button>
 		</>
 	);
 }

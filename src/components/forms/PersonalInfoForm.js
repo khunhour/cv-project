@@ -38,7 +38,7 @@ export default function PersonalInfoForm({
 				value={photo}
 				onChange={onChangeImage}
 			/>
-			<input
+			<textarea
 				id="description"
 				type="text"
 				placeholder="Description"
