@@ -12,9 +12,9 @@ export default function WorkForm({ work, onChange, onSubmit, onDelete }) {
 	));
 	return (
 		<form id="workForm" onSubmit={onSubmit}>
-			<h3>Work Experience</h3>
+			<h3 className="heading">Work Experience</h3>
 			{workItems}
-			<button type="submit">Add Work Experience</button>
+			<button className="addBtn" type="submit">Add Work Experience</button>
 		</form>
 	);
 }

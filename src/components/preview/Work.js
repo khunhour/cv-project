@@ -8,7 +8,7 @@ export default function Work(props) {
 
 	return (
 		<div>
-			<h3>Work Experience</h3>
+			<h3 className="heading">Work Experience</h3>
 			<div>{workItems}</div>
 		</div>
 	);

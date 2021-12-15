@@ -8,7 +8,7 @@ export default function Education(props) {
 
 	return (
 		<div>
-			<h3>Education</h3>
+			<h3 className="heading">Education</h3>
 			<div>{educationItems}</div>
 		</div>
 	);

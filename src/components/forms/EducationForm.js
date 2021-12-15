@@ -20,7 +20,7 @@ export default function EducationForm({
 		<form id="educationForm" onSubmit={onSubmit}>
 			<h3 className="heading">Education</h3>
 			{educationItems}
-			<button type="submit">Add Education</button>
+			<button className="addBtn" type="submit">Add Education</button>
 		</form>
 	);
 }

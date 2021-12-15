@@ -8,8 +8,8 @@ export default function Skills(props) {
 
 	return (
 		<div>
-			<h3>Skills</h3>
-			<div>{skillsItems}</div>
+			<h3 className="heading">Skills</h3>
+			<ul>{skillsItems}</ul>
 		</div>
 	);
 }

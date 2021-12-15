@@ -12,9 +12,9 @@ export default function SkillsForm({ skills, onChange, onSubmit, onDelete }) {
 	));
 	return (
 		<form id="skillsForm" onSubmit={onSubmit}>
-			<h3>Skills</h3>
+			<h3 className="heading">Skills</h3>
 			{skillItems}
-			<button type="submit">Add Skill</button>
+			<button className="addBtn" type="submit">Add Skill</button>
 		</form>
 	);
 }

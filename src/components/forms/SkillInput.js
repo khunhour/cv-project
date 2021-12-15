@@ -11,7 +11,7 @@ export default function SkillInput({ skillItem, onChange, onDelete }) {
 				value={skill}
 				onChange={(e) => onChange(e, id)}
 			/>
-			<button onClick={() => onDelete(id)}>Delete Skill</button>
+			<button className="deleteBtn" onClick={() => onDelete(id)}>Delete Skill</button>
 		</>
 	);
 }

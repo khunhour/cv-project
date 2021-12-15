@@ -32,7 +32,7 @@ export default function EducationInput({ educationItem, onChange, onDelete }) {
 				value={endEduYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-			<button onClick={() => onDelete(id)}>Delete Education</button>
+			<button className="deleteBtn" onClick={() => onDelete(id)}>Delete Education</button>
 		</>
 	);
 }

@@ -46,6 +46,19 @@ input {
 	margin-bottom: 0.6rem;
 }
 
+.deleteBtn{
+	padding:8px;
+	background-color: rgb(247, 60, 60);
+	color: white;
+	border-radius: 5px;
+}
+.addBtn{
+	padding:8px;
+	background-color: #335384;
+	color: white;
+	border-radius: 5px;
+}
+
 .preview {
 	display: grid;
 	background-color: rgb(8, 53, 138);
@@ -100,4 +113,15 @@ input {
 
 .contacts {
 	display: flex;
+}
+
+.group-box{
+	display:block;
+	border-radius: 3px;
+	border-left: 4px solid #6bafd5;
+	gap:1rem;
+}
+
+footer{
+	background-color: #335384;
 }

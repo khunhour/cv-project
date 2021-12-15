@@ -32,7 +32,7 @@ export default function WorkInput({ workItem, onChange, onDelete }) {
 				value={endWorkYear}
 				onChange={(e) => onChange(e, id)}
 			/>
-			<button onClick={() => onDelete(id)}>Delete Work Experience</button>
+			<button className="deleteBtn" onClick={() => onDelete(id)}>Delete Work Experience</button>
 		</>
 	);
 }

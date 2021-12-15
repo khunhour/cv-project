@@ -4,7 +4,7 @@ export default function EducationItem({ educationItem }) {
 	const { school, degree, startEduYear, endEduYear } = educationItem;
 
 	return (
-		<div>
+		<div className="group-box">
 			<div>{degree}</div>
 			<div>{school}</div>
 			<div>
