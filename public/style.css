@@ -15,7 +15,9 @@ header {
 	justify-content: space-between;
 	padding: 0.8rem;
 	background-color: #335384;
-	color: #6bafd5;
+	color: white;
+	font-size: 2rem;
+	font-weight: 700;
 }
 main {
 	display: flex;
@@ -194,4 +196,23 @@ li {
 
 footer {
 	background-color: #335384;
+	color: white;
+	display: flex;
+	margin-top: auto;
+	height: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+footer * {
+	line-height: 2rem;
+}
+footer img {
+	height: 1rem;
+	width: 1rem;
+	background-color: white;
+	border-radius: 50%;
+	border: solid white 1px;
+	margin-left: 6px;
+	margin-top: 6px;
+	line-height: 2rem;
 }
