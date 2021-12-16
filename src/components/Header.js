@@ -5,7 +5,6 @@ export default class Header extends Component {
 		return (
 			<header>
 				<div>CV-Builder</div>
-				<button>Preview</button>
 			</header>
 		);
 	}

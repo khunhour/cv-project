@@ -9,39 +9,38 @@ export default class Main extends Component {
 		this.state = {
 			photo: "",
 			personalInfo: {
-				firstName: "Khunhour",
-				lastName: "Morm",
-				title: "Software Engineer",
-				description:
-					" I am a software engineer eager to learn more about web dev",
+				firstName: "",
+				lastName: "",
+				title: "",
+				description: "",
 			},
 			contacts: {
-				email: "khonhourmorm@gmail.com",
-				tel: "09023193103",
-				address: "japan",
+				email: "",
+				tel: "",
+				address: "",
 			},
 			skills: [
 				{
 					id: uniqid(),
-					skill: "gaming blindfold",
+					skill: "",
 				},
 			],
 			work: [
 				{
 					id: uniqid(),
-					role: "software arcticsdkfos",
-					company: "Facebook",
-					startWorkYear: "1998",
-					endWorkYear: "2021",
+					role: "",
+					company: "",
+					startWorkYear: "",
+					endWorkYear: "",
 				},
 			],
 			education: [
 				{
 					id: uniqid(),
-					school: "Tohoku University",
-					degree: "Computer Science",
-					startEduYear: "2005",
-					endEduYear: "2008",
+					school: "",
+					degree: "",
+					startEduYear: "",
+					endEduYear: "",
 				},
 			],
 		};
