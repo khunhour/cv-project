@@ -23,7 +23,7 @@ export default class CVForm extends Component {
 			onDeleteSkills,
 		} = this.props;
 		return (
-			<div className="CV-form">
+			<div className="CV-form hidden">
 				<PersonalInfoForm
 					personalInfo={info.personalInfo}
 					onChange={onChangePersonalInfo}

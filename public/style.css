@@ -18,21 +18,23 @@ header {
 	color: white;
 	font-size: 2rem;
 	font-weight: 700;
+	position: sticky;
 }
 main {
 	display: flex;
 	padding: 1rem;
 	gap: 1rem;
 	justify-content: space-evenly;
+	flex: 1;
 }
 
 .CV-form {
-	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
 	width: 600px;
 	box-sizing: border-box;
+	background-color: white;
 }
 
 form {
@@ -41,12 +43,18 @@ form {
 	gap: 0.3rem;
 }
 textarea,
-input {
+input,
+label {
 	display: block;
-	border: solid 1px #dfe0e0;
+	border: solid 1px #d4d4d4;
+	background-color: #f3f7fa;
 	border-radius: 2px;
 	font-family: "Poppins", sans-serif;
 	font-size: 0.75rem;
+}
+
+input[type="file"] {
+	display: none;
 }
 
 .heading {
@@ -80,24 +88,30 @@ button {
 	position: fixed;
 	bottom: 8px;
 	right: 8px;
-	border-radius: 14px;
+	border-radius: 50px;
 	background-color: #335384;
+	border: 2px white solid;
+	padding: 10px 20px;
 	color: white;
+	font-size: 0.8rem;
+	font-family: inherit;
 }
 
 .preview {
 	display: grid;
-	background-color: rgb(8, 53, 138);
 	grid-template-columns: 300px 2fr;
 	grid-template-rows: 180px 800px;
-	width: 800px;
-	height: 900px;
 	box-sizing: border-box;
 }
 
 .preview > div {
 	padding: 0.8rem;
 }
+
+.hidden {
+	display: none;
+}
+
 .upper-left,
 .lower-left {
 	background-color: #335384;
@@ -114,7 +128,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	color: black;
-	background-color: cornsilk;
+	background-color: white;
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
@@ -215,4 +229,18 @@ footer img {
 	margin-left: 6px;
 	margin-top: 6px;
 	line-height: 2rem;
+}
+
+@media (max-width: 1100px) {
+	main {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 728px) {
+	.preview {
+		transform: scale(0.85);
+	}
 }

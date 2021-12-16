@@ -30,6 +30,16 @@ export default function PersonalInfoForm({
 				value={title}
 				onChange={onChange}
 			/>
+			<textarea
+				id="description"
+				type="text"
+				placeholder="Description"
+				value={description}
+				onChange={onChange}
+			/>
+			<label for="photo" class="btn">
+				+ Add A Photo
+			</label>
 			<input
 				id="photo"
 				accept="images/*"
@@ -37,13 +47,6 @@ export default function PersonalInfoForm({
 				placeholder="Add A Photo"
 				value={photo}
 				onChange={onChangeImage}
-			/>
-			<textarea
-				id="description"
-				type="text"
-				placeholder="Description"
-				value={description}
-				onChange={onChange}
 			/>
 		</form>
 	);
