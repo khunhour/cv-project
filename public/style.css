@@ -94,7 +94,7 @@ button {
 
 .preview {
 	display: grid;
-	grid-template-columns: 16rem 2fr;
+	grid-template-columns: 16rem 22rem;
 	grid-template-rows: 10rem 44rem;
 	box-sizing: border-box;
 }
