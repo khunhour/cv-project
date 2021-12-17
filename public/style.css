@@ -32,7 +32,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
-	width: 600px;
+	width: 33rem;
 	box-sizing: border-box;
 	background-color: white;
 }
@@ -99,17 +99,13 @@ button {
 
 .preview {
 	display: grid;
-	grid-template-columns: 300px 2fr;
-	grid-template-rows: 180px 800px;
+	grid-template-columns: 16rem 2fr;
+	grid-template-rows: 10rem 44rem;
 	box-sizing: border-box;
 }
 
 .preview > div {
 	padding: 0.8rem;
-}
-
-.hidden {
-	display: none;
 }
 
 .upper-left,
@@ -130,14 +126,14 @@ button {
 	color: black;
 	background-color: white;
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+	width: 8.3rem;
+	height: 8.3rem;
 	margin: auto;
 }
 .profile-photo img {
-	height: 150px;
-	width: 150px;
-	line-height: 150px;
+	height: 8.3rem;
+	width: 8.3rem;
+	line-height: 8.3rem;
 	text-align: center;
 }
 
@@ -156,7 +152,7 @@ button {
 	margin: 0;
 }
 #banner h1 {
-	width: 390px;
+	width: 21rem;
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	border-bottom: solid 2px #335384;
@@ -240,7 +236,17 @@ footer img {
 }
 
 @media (max-width: 728px) {
+	:root {
+		font-size: 17px;
+	}
 	.preview {
 		transform: scale(0.85);
+	}
+}
+@media (max-width: 500px) {
+	:root {
+		font-size: 13px;
+	}
+	.preview {
 	}
 }
