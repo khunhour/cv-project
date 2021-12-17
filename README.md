@@ -1,9 +1,8 @@
 # About
 
--   This project is under construction!!!
 -   this is a CV Builder app
 -   Built using `create-react-app`
--   Live Preview:
+-   Live Preview: https://khunhour.github.io/cv-project/
 
 # Build With
 
