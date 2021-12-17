@@ -243,4 +243,10 @@ footer img {
 	:root {
 		font-size: 13px;
 	}
+	.CV-form {
+		width: 100vw;
+	}
+	.preview {
+		width: 100vw;
+	}
 }
