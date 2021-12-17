@@ -244,9 +244,9 @@ footer img {
 		font-size: 13px;
 	}
 	.CV-form {
-		width: 100vw !important;
+		width: 90vw;
 	}
 	.preview {
-		width: 100vw !important;
+		grid-template-columns: 45vw 70vw;
 	}
 }
