@@ -43,6 +43,7 @@ export default class Main extends Component {
 					endEduYear: "",
 				},
 			],
+			isCVHidden: false,
 		};
 	}
 	handleChangeImage = (e) => {
@@ -175,11 +176,19 @@ export default class Main extends Component {
 			return { ...prevState, skills: [...newSkills] };
 		});
 	};
+
+	handlePreviewBtn = () => {
+		this.setState((prevState) => {
+			return { ...prevState, isCVHidden: !prevState.isCVHidden };
+		});
+	};
+
 	render() {
 		return (
 			<main>
 				<CVForm
 					info={this.state}
+					isCVHidden={this.state.isCVHidden}
 					onChangePersonalInfo={this.handleChangePersonalInfo}
 					onChangeImage={this.handleChangeImage}
 					onChangeContacts={this.handleChangeContacts}
@@ -194,7 +203,9 @@ export default class Main extends Component {
 					onDeleteSkills={this.handleDeleteSkills}
 				/>
 				<Preview info={this.state} />
-				<button className="previewBtn">Preview</button>
+				<button className="previewBtn" onClick={this.handlePreviewBtn}>
+					{this.state.isCVHidden ? "Close" : "Preview"}
+				</button>
 			</main>
 		);
 	}

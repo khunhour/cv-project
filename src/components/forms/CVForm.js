@@ -9,6 +9,7 @@ export default class CVForm extends Component {
 	render() {
 		const {
 			info,
+			isCVHidden,
 			onChangePersonalInfo,
 			onChangeImage,
 			onChangeContacts,
@@ -22,8 +23,9 @@ export default class CVForm extends Component {
 			onDeleteWork,
 			onDeleteSkills,
 		} = this.props;
+
 		return (
-			<div className="CV-form hidden">
+			<div className={!isCVHidden ? "CV-form" : "CV-form hidden"}>
 				<PersonalInfoForm
 					personalInfo={info.personalInfo}
 					onChange={onChangePersonalInfo}
