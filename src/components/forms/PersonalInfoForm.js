@@ -37,9 +37,6 @@ export default function PersonalInfoForm({
 				value={description}
 				onChange={onChange}
 			/>
-			<label for="photo" class="btn">
-				+ Add A Photo
-			</label>
 			<input
 				id="photo"
 				accept="images/*"
