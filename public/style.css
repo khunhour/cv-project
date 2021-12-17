@@ -133,6 +133,7 @@ button {
 .profile-photo img {
 	height: 8.3rem;
 	width: 8.3rem;
+	border-radius: 50%;
 	line-height: 8.3rem;
 	text-align: center;
 }
@@ -246,7 +247,5 @@ footer img {
 @media (max-width: 500px) {
 	:root {
 		font-size: 13px;
-	}
-	.preview {
 	}
 }

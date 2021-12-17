@@ -186,22 +186,24 @@ export default class Main extends Component {
 	render() {
 		return (
 			<main>
-				<CVForm
-					info={this.state}
-					isCVHidden={this.state.isCVHidden}
-					onChangePersonalInfo={this.handleChangePersonalInfo}
-					onChangeImage={this.handleChangeImage}
-					onChangeContacts={this.handleChangeContacts}
-					onChangeEducation={this.handleChangeEducation}
-					onChangeWork={this.handleChangeWork}
-					onChangeSkills={this.handleChangeSkills}
-					onSubmitEducation={this.onSubmitEducation}
-					onSubmitSkills={this.onSubmitSkills}
-					onSubmitWork={this.onSubmitWork}
-					onDeleteEducation={this.handleDeleteEducation}
-					onDeleteWork={this.handleDeleteWork}
-					onDeleteSkills={this.handleDeleteSkills}
-				/>
+				{this.state.isCVHidden ? null : (
+					<CVForm
+						info={this.state}
+						isCVHidden={this.state.isCVHidden}
+						onChangePersonalInfo={this.handleChangePersonalInfo}
+						onChangeImage={this.handleChangeImage}
+						onChangeContacts={this.handleChangeContacts}
+						onChangeEducation={this.handleChangeEducation}
+						onChangeWork={this.handleChangeWork}
+						onChangeSkills={this.handleChangeSkills}
+						onSubmitEducation={this.onSubmitEducation}
+						onSubmitSkills={this.onSubmitSkills}
+						onSubmitWork={this.onSubmitWork}
+						onDeleteEducation={this.handleDeleteEducation}
+						onDeleteWork={this.handleDeleteWork}
+						onDeleteSkills={this.handleDeleteSkills}
+					/>
+				)}
 				<Preview info={this.state} />
 				<button className="previewBtn" onClick={this.handlePreviewBtn}>
 					{this.state.isCVHidden ? "Close" : "Preview"}
