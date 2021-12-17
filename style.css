@@ -43,18 +43,13 @@ form {
 	gap: 0.3rem;
 }
 textarea,
-input,
-label {
+input {
 	display: block;
 	border: solid 1px #d4d4d4;
 	background-color: #f3f7fa;
 	border-radius: 2px;
 	font-family: "Poppins", sans-serif;
 	font-size: 0.75rem;
-}
-
-input[type="file"] {
-	display: none;
 }
 
 .heading {
